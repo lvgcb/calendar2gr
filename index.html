@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Календарь</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <h1> 2 топ </h1>
+    <div class="calendar">
+        <div class="navigation">
+            <button onclick="changeMonth(-1)">&#10094;</button>
+            <h2 id="month-year"></h2>
+            <button onclick="changeMonth(1)">&#10095;</button>
+        </div>
+        <div class="days">
+            <div class="day">Пн</div>
+            <div class="day">Вт</div>
+            <div class="day">Ср</div>
+            <div class="day">Чт</div>
+            <div class="day">Пт</div>
+            <div class="day">Сб</div>
+            <div class="day">Вс</div>
+        </div>
+        <div class="dates" id="dates"></div>
+    </div>
+
+    <div id="modal" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeModal()">&times;</span>
+            <h2 id="modal-date"></h2>
+            <div id="schedule-container">
+                <label>Урок 1:</label>
+                <textarea class="schedule" placeholder="Введите урок 1..."></textarea>
+                <label>Урок 2:</label>
+                <textarea class="schedule" placeholder="Введите урок 2..."></textarea>
+                <label>Урок 3:</label>
+                <textarea class="schedule" placeholder="Введите урок 3..."></textarea>
+                <label>Урок 4:</label>
+                <textarea class="schedule" placeholder="Введите урок 4..."></textarea>
+                <label>Урок 5:</label>
+                <textarea class="schedule" placeholder="Введите урок 5..."></textarea>
+            </div>
+            <button onclick="saveSchedule()">Сохранить</button>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
